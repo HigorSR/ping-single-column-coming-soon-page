@@ -6,26 +6,34 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main>
-      <img className="bg-[url('../../public/logo.svg')]" />
-      <div>
-        <h1>We are launching soon!</h1>
-        <p>Subscribe and get notified</p>
-        <form>
-          <input type="email" />
-          <button>Notify Me</button>
+    <main className="flex flex-col items-center justify-center gap-10 h-dvh">
+      <div className="bg-[url('../../public/logo.svg')] h-7 w-[90px] bg-no-repeat mt-10 "></div>
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-2xl text-Gray">We are launching <span className="text-black font-bold">soon!</span></h1>
+          <p className="text-sm text-center">Subscribe and get notified</p>
+        </div>
+        <form className="flex flex-col gap-2 w-[327px]">
+          <input type="email" className=" border rounded-3xl px-9 py-2" placeholder="Your email address..."/>
+          <button className="bg-Blue text-white shadow-[0px_5px_10px_rgba(0,0,0,0)] shadow-Pale-Blue rounded-3xl px-9 py-2">Notify Me</button>
         </form>
       </div>
 
-      <Image src={imgDashboard} />
+      <Image src={imgDashboard} className="w-[327px]" />
 
-      <footer>
-        <div>
-          <FaFacebookF />
-          <FaTwitter />
-          <FaInstagram />
+      <footer className="flex flex-col gap-4 items-center justify-end grow mb-10">
+        <div className="flex gap-3">
+          <div className="border border-Blue p-1 rounded-full text-Blue">
+            <FaFacebookF className="size-5 cursor-pointer" />
+          </div>
+          <div className="border border-Blue p-1 rounded-full text-Blue">
+            <FaTwitter className="size-5 cursor-pointer" />
+          </div>
+          <div className="border border-Blue p-1 rounded-full text-Blue">
+            <FaInstagram className="size-5 cursor-pointer" />
+          </div>
         </div>
-        <p>&copy; Copyright Ping. All rights reserved.</p>
+        <p className="text-Gray">&copy; Copyright Ping. All rights reserved.</p>
       </footer>
     </main>
   );
